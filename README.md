@@ -2,7 +2,7 @@
 
 Se trabajarán con los datos de: 
 
-* [Repositorio de Kaggle](https://www.kaggle.com/datasets/volpatto/coffee-quality-database-from-cqi)
+* [Repositorio de Kaggle](https://www.kaggle.com/datasets/volpatto/coffee-quality-database-from-cqi){:target="_blank"}
 
 ## Encabezado de datos:
 
