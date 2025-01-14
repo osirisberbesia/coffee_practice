@@ -12,7 +12,7 @@ Se trabajarán con los datos de:
 * Farm.Name: Nombre de la granja/finca
 * Lot.Number: Número de lote del café 
 * Mill: Molino/procesador utilizado
-* ICO.Number: número asignado por la Organización Internacional del Café (International Coffee Organization, ICO)
+* ICO.Number: número de lote de exportación asignado por la Organización Internacional del Café (International Coffee Organization, ICO)
 * Company: Nombre de la compañía asociada con el café
 * Altitude: altura sobre el nivel del mar a la que se cultiva el café
 * Region: Región específica de cultivo del café
@@ -71,7 +71,27 @@ Se trabajarán con los datos de:
    * Green (este es el color más básico y puede indicar granos de menor calidad)
  * Category.One.Defects: se establece que se trabaja con una muestra de 100gr
  * Category.Two.Defects: se establece que se trabaja con una muestra de 300gr
+* Se crea la variable record para la enumeración de cada registro
+* Por la ausencia de la información en cuanto a valores, formato u otra información al respecto, se dejan fuera del estudio los siguientes datos:
+  * ICO.Number
+  * Certification.Address	
+  * Certification.Contact
 
+## Preguntas planteadas con los datos
+
+1. ¿Cuáles paises producen el grano de mejor color?
+   1. ¿Qué tipo de molino usan?
+2. Top 3 países con productores de bolsas de café más pesadas
+3. Top 3 paises con granos en humedad ideal
+4. Top 3 fincas con mejor Total.Cup.Points donde el café en Category.Two.Defects está sin defectos
+5. Relación peso-calidad, grano-Total.Cup.Points
+6. Distancia en tiempo entre cosecha y vencimiento
+7. Relación altitud - calidad del grano
+   
+   Alertas:
+   1. Fincas con producción de café no idóneo
+   2. Top 3 fincas con granos más defectuosos
+   3. Top 5 fincas que se vence muy rápido el café
 ## Otros Enlaces
 
 [Specialty Coffee Association (SCA)](https://sca.coffee/value-assessment)
