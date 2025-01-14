@@ -71,11 +71,6 @@ Se trabajarán con los datos de:
    * Green (este es el color más básico y puede indicar granos de menor calidad)
  * Category.One.Defects: se establece que se trabaja con una muestra de 100gr
  * Category.Two.Defects: se establece que se trabaja con una muestra de 300gr
-* Se crea la variable record para la enumeración de cada registro
-* Por la ausencia de la información en cuanto a valores, formato u otra información al respecto, se dejan fuera del estudio los siguientes datos:
-  * ICO.Number
-  * Certification.Address	
-  * Certification.Contact
 
 ## Preguntas planteadas con los datos
 
@@ -92,7 +87,46 @@ Se trabajarán con los datos de:
    1. Fincas con producción de café no idóneo
    2. Top 3 fincas con granos más defectuosos
    3. Top 5 fincas que se vence muy rápido el café
-## Otros Enlaces
+
+
+## Tratamiento inicial
+
+
+* Para las variables:  Owner, Country.of.Origin, Farm.Name, Company - los nulos se transforman a: none, agregando al nuevo nombre de la variable un _clean al final
+* Por la inconsistencia en los datos de Lot.Number, se deja esta información por fuera del estudio.
+* Se crea la variable record para la enumeración de cada registro
+* Por la ausencia de la información en cuanto a valores, formato u otra información al respecto, se dejan fuera del estudio los siguientes datos:
+  * ICO.Number
+  * Certification.Address	
+  * Certification.Contact
+* Altitude: se transforma a altitud_ini y altitud_end, eliminando también datos dentro de los valores como snm, msnm, mnm, que en cualquiera de sus formas significa: metros sobre el nivel del mar.
+  * **Adicionalmente se establecen como 0 los valores donde Altitude vino nula**
+* Se estandariza el valor de Bag.Weight, separando los datos y su tipo de peso, sean libras o Kg, para dejar todos los valores en Kilos. Los valores que representaban lb y kgs simultáneamente se dejaron por fuera.
+* 
+
+
+# Resultados
+
+
+
+1. ¿Cuáles paises producen el grano de mejor color?
+   1. ¿Qué tipo de molino usan?
+2. Top 3 países con productores de bolsas de café más pesadas
+3. Top 3 paises con granos en humedad ideal
+4. Top 3 fincas con mejor Total.Cup.Points donde el café en Category.Two.Defects está sin defectos
+5. Relación peso-calidad, grano-Total.Cup.Points
+6. Distancia en tiempo entre cosecha y vencimiento
+7. Relación altitud - calidad del grano
+   
+   Alertas:
+   1. Fincas con producción de café no idóneo
+   2. Top 3 fincas con granos más defectuosos
+   3. Top 5 fincas que se vence muy rápido el café
+
+
+
+
+# Otros Enlaces
 
 [Specialty Coffee Association (SCA)](https://sca.coffee/value-assessment)
 
