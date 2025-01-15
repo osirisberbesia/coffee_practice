@@ -127,20 +127,47 @@ Según los datos obtenidos del data set de la cosecha presente, de los 1337 regi
 
     El 67.1% de este grano es procesado con el método Washed / Wet: Clean Flavor para proveer un sabor más limpio.
 
-2. Top 3 países con las producciones de bolsas de café más pesadas
+2. Relación de las producciones de bolsas de café más pesadas por tipo de especie
+![alt text](image-2.png)
 
-3. Top 3 países con granos en humedad ideal
-4. Top 3 fincas con mejor Total.Cup.Points donde el café en Category.Two.Defects está sin defectos
+Aunque no se visualice a través de un gráfico scatter plot, se puede observar que las producciones más pesadas corresponden a la especie arabica
+
+3. Top 3 países productores de granos con humedad ideal 
+  
+![alt text](image-3.png)
+
+Se puede observar que respetando la verdad establecida anteriormente la cual indica que el rango permitido de humedad para la cosecha de granos de café oscila entre 8% y 12%, serían Guatemala, México y Brazil los países con el mejor control de humedad en sus producciones.
+
+4. Top 5 fincas con mejor promedio de Total.Cup.Points donde el café en Category.Two.Defects está sin defectos  
+  
+![alt text](image-4.png)
+
 5. Relación peso-calidad, grano-Total.Cup.Points
-7. Relación altitud - calidad del grano
+![alt text](image-5.png)
+
+
+No existe ninguna relación entre la cantidad de kilos producidos en la cosecha con la puntuación final del grano.
+
+6. Relación altitud - calidad del grano
+
+![alt text](image-6.png)
+
+Observando la gráfica, por especie, color del grano y  humedad, no hay un patrón claro o establecido que indique que la altitud de la cosecha influya de forma considerable en la calidad del grano. Sin embargo, la especie robusta para el color de grano Blue-Green, solo tenemos un valor perteneciente al rango de altitud 750-779 metros sobre el nivel del mar.
    
-   Alertas:
+   ## Alertas:
+
+
    1. Fincas con producción de café no idóneo
+
+![alt text](image-7.png)
+
    2. Top 3 fincas con granos más defectuosos
-   3. Top 5 fincas que se vence muy rápido el café
+
+![alt text](image-8.png)
 
 
-## Hallazgos
+
+#### Nota:
 
 El período de validez o shelf_life en días para todas las cosechas es de 365 días.
 
