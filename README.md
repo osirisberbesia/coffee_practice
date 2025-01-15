@@ -74,10 +74,10 @@ Se trabajarán con los datos de:
 
 ## Preguntas planteadas con los datos
 
-1. ¿Cuáles paises producen el grano de mejor color?
+1. ¿Cuáles países producen el grano de mejor color?
    1. ¿Qué tipo de molino usan?
 2. Top 3 países con productores de bolsas de café más pesadas
-3. Top 3 paises con granos en humedad ideal
+3. Top 3 países con granos en humedad ideal
 4. Top 3 fincas con mejor Total.Cup.Points donde el café en Category.Two.Defects está sin defectos
 5. Relación peso-calidad, grano-Total.Cup.Points
 6. Distancia en tiempo entre cosecha y vencimiento
@@ -102,20 +102,36 @@ Se trabajarán con los datos de:
 * Altitude: se transforma a altitud_ini y altitud_end, eliminando también datos dentro de los valores como snm, msnm, mnm, que en cualquiera de sus formas significa: metros sobre el nivel del mar.
   * **Adicionalmente se establecen como 0 los valores donde Altitude vino nula**
 * Se estandariza el valor de Bag.Weight, separando los datos y su tipo de peso, sean libras o Kg, para dejar todos los valores en Kilos. Los valores que representaban lb y kgs simultáneamente se dejaron por fuera.
-* 
+* En el caso de Harvest.Year, existen valores con meses, o con 2 años diferentes, se deja el año mayor y se eliminan todos los demás caracteres diferentes a los numéricos.
+* Las fechas Grading.Date y Expiration son presentadas en forma de texto, por ejemplo: April 4th, 2015, se hace el tratamiento de datos necesario para obtener la fecha en formato fecha.
+  
+-----------------
+
+[Hoja de cálculo resultante](https://docs.google.com/spreadsheets/d/15bHLGXgFA3SXPlNtBbFu2yV-gN86hkF6WJ6GbSUVOHs/edit?usp=sharing)
+
+---------------------
 
 
 # Resultados
 
+1. ¿Cuáles países producen el grano de mejor color?
+Según los datos obtenidos del data set de la cosecha presente, de los 1337 registros, 76 de ellos corresponden al grano Blue-Green, siendo Brazil, Taiwan y Costa Rica, los top 3 países que producen el grano de mejor color.
+
+    Más detalle:
+
+    ![alt text](image.png)
 
 
-1. ¿Cuáles paises producen el grano de mejor color?
-   1. ¿Qué tipo de molino usan?
-2. Top 3 países con productores de bolsas de café más pesadas
-3. Top 3 paises con granos en humedad ideal
+   * ¿Cuál es el uso más frecuente para el grano de mejor color?
+    ![alt text](image-1.png)
+
+    El 67.1% de este grano es procesado con el método Washed / Wet: Clean Flavor para proveer un sabor más limpio.
+
+2. Top 3 países con las producciones de bolsas de café más pesadas
+
+3. Top 3 países con granos en humedad ideal
 4. Top 3 fincas con mejor Total.Cup.Points donde el café en Category.Two.Defects está sin defectos
 5. Relación peso-calidad, grano-Total.Cup.Points
-6. Distancia en tiempo entre cosecha y vencimiento
 7. Relación altitud - calidad del grano
    
    Alertas:
@@ -124,7 +140,9 @@ Se trabajarán con los datos de:
    3. Top 5 fincas que se vence muy rápido el café
 
 
+## Hallazgos
 
+El período de validez o shelf_life en días para todas las cosechas es de 365 días.
 
 # Otros Enlaces
 
